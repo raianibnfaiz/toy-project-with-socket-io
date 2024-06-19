@@ -3,12 +3,16 @@
     <title>Socket io</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <h1 id="raian">Home</h1>
     <p>Welcome to the home page.</p>
-    <p><a href="about.php">About</a></p>
+    <p>Magic</p>
 </html>
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var socket = io();
+    socket.on('message', function(data){
+        document.getElementById('raian').innerHTML = data;
+    });
+    
 </script>

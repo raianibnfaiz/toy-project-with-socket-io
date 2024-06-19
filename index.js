@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('A user disconnected');
     });
-    socket.on('chat message', (msg) => {
-        console.log('message: ' + msg);
-    });
+    setTimeout(() => {
+        socket.send( 'Raian sends this message from the server');
+    }, 8000);
 });
